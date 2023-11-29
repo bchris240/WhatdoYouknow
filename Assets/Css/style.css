@@ -1,20 +1,20 @@
 /* Body styling */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Arial', sans-serif;
   font-size: 120%;
-  background-color: #f8f8f8;
+  background-color: #f0f0f0; /* Lighter background */
   color: #333;
 }
 
 /* Link styling */
 a {
-  color: #563d7c;
+  color: #8e44ad; /* Brighter link color */
   text-decoration: none;
   transition: color 0.3s;
 }
 
 a:hover {
-  color: #8570a5;
+  color: #3498db; /* Highlight link color on hover */
 }
 
 /* Button styling */
@@ -22,37 +22,33 @@ button {
   display: inline-block;
   margin: 5px;
   cursor: pointer;
-  font-size: 100%;
-  background-color: #563d7c;
-  border-radius: 5px;
-  padding: 10px 20px;
+  font-size: 110%; /* Slightly larger font */
+  background-color: #3498db; /* Button color */
+  border-radius: 8px; /* Rounded corners */
+  padding: 12px 24px; /* More padding for a larger button */
   color: white;
-  border: 0;
-  transition: background-color 0.3s;
+  border: 2px solid #2980b9; /* Border color */
+  transition: background-color 0.3s, color 0.3s;
 }
 
 button:hover {
-  background-color: #8570a5;
+  background-color: #2980b9; /* Darker color on hover */
 }
 
 /* Container styling */
 .wrapper {
-  margin: 100px auto 0 auto;
-  max-width: 600px;
+  margin: 50px auto 0 auto;
+  max-width: 700px; /* Wider container */
   background-color: #fff;
-  padding: 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-}
-
-/* Visibility class */
-.hide {
-  display: none;
+  padding: 30px; /* More padding for content */
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2); /* Slightly larger shadow */
 }
 
 /* Start section styling */
 .start {
   text-align: center;
+  margin-bottom: 20px; /* Add some spacing below */
 }
 
 /* Scores and Timer styling */
@@ -60,37 +56,63 @@ button:hover {
 .timer {
   position: absolute;
   top: 10px;
-  left: 10px;
-  font-size: 16px;
+  right: 10px; /* Move to the top-right corner */
+  font-size: 18px; /* Larger font for visibility */
+  color: #2ecc71; /* Green color */
+}
+
+/* High Scores styling */
+.high-scores {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 18px;
+  text-align: right;
+  color: #e74c3c; /* Red color for emphasis */
+}
+
+/* Adjust the margin and padding for better spacing */
+.high-scores span {
+  margin-left: 15px; /* Slightly more margin */
+  padding: 8px; /* More padding for visual appeal */
+}
+
+/* Add a max-width to prevent the high scores text from overflowing */
+.high-scores span:first-child {
+  max-width: 120px; /* Adjusted value */
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 /* Feedback styling */
 .feedback {
   font-style: italic;
-  font-size: 120%;
-  margin-top: 20px;
-  padding-top: 10px;
-  color: gray;
+  font-size: 130%; /* Larger font for emphasis */
+  margin-top: 30px; /* More space between sections */
+  padding-top: 15px;
+  color: #95a5a6; /* Light gray color */
   border-top: 2px solid #ccc;
 }
 
 /* List styling */
 ol {
   padding-left: 0;
-  max-height: 400px;
+  max-height: 450px; /* Slightly taller list */
   overflow: auto;
 }
 
 li {
-  padding: 10px;
+  padding: 15px; /* More padding for list items */
   list-style: decimal inside none;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, transform 0.3s;
 }
 
 li:nth-child(odd) {
-  background-color: #f3edfc;
+  background-color: #ecf0f1; /* Lighter background for odd items */
 }
 
 li:hover {
-  background-color: #e0d1f1;
+  background-color: #d4e6f1; /* Lighter background on hover */
+  transform: scale(1.02); /* Slight scale on hover for a subtle effect */
 }

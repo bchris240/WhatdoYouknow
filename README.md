@@ -39,5 +39,6 @@ Enjoy the Coding Quiz Challenge! Test your coding knowledge and compete for a sp
 ## Screenshot
 
 <!-- Add your screenshot here -->
-![Deployed Website](<![WhatdoYouknow Screenshot](Assets/WhatdoYouknowscreenshot.png)>)
+![WhatdoYouknow Screenshot](Assets/WhatdoYouknowscreenshot.png)
+
 

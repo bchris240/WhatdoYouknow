@@ -127,6 +127,9 @@ function quizEnd() {
 
   // Hide the questions section
   questionsEl.setAttribute('class', 'hide');
+
+  // Display high scores
+  displayHighscores();
 }
 
 // Function to update the timer
@@ -153,5 +156,52 @@ function saveHighscore() {
     // Get saved scores from local storage, or if none, set to an empty array
     var highscores = JSON.parse(window.localStorage.getItem('highscores')) || [];
 
-    // Create
+    // Create a new high score object
+    var newHighscore = {
+      initials: initials,
+      score: time
+    };
 
+    // Add the new high score to the array
+    highscores.push(newHighscore);
+
+    // Sort the high scores in descending order
+    highscores.sort(function (a, b) {
+      return b.score - a.score;
+    });
+
+    // Store the high scores in local storage
+    window.localStorage.setItem('highscores', JSON.stringify(highscores));
+
+    // Display high scores
+    displayHighscores();
+  }
+}
+
+// Function to display high scores
+function displayHighscores() {
+  // Get the high scores container element
+  var highscoresContainer = document.getElementById('highscores-container');
+
+  // Clear existing content in the container
+  highscoresContainer.innerHTML = '';
+
+  // Get saved scores from local storage, or if none, set to an empty array
+  var highscores = JSON.parse(window.localStorage.getItem('highscores')) || [];
+
+  // Create a list element for each high score and append it to the container
+  highscores.forEach(function (score) {
+    var scoreItem = document.createElement('li');
+    scoreItem.textContent = score.initials + ' - ' + score.score;
+    highscoresContainer.appendChild(scoreItem);
+  });
+}
+
+// Event listener for the start button to initiate the quiz
+startBtn.addEventListener('click', startQuiz);
+
+// Event delegation for the choices container
+choicesEl.addEventListener('click', questionClick);
+
+// Event listener for the submit button to save high score
+submitBtn.addEventListener('click', saveHighscore);

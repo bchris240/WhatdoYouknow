@@ -39,5 +39,5 @@ Enjoy the Coding Quiz Challenge! Test your coding knowledge and compete for a sp
 ## Screenshot
 
 <!-- Add your screenshot here -->
-![Deployed Website](<Assets/Web capture_27-11-2023_224110_bchris240.github.io.jpeg>))
+![Deployed Website](<![WhatdoYouknow Screenshot](Assets/WhatdoYouknowscreenshot.png)>))
 

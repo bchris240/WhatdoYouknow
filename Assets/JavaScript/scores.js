@@ -48,5 +48,3 @@ document.getElementById('clear').onclick = clearHighscores;
 
 // run the printHighscores function when the page loads
 printHighscores();
-
-  
